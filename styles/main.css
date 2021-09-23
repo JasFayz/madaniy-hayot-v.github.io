@@ -9400,7 +9400,7 @@ body {
   height: 645px;
   background: url("./../img/footer__el.png") no-repeat;
   bottom: -110px;
-  right: -110px;
+  right: 80px;
   z-index: -1;
 }
 
