@@ -201,7 +201,7 @@ if (document.querySelector('#map')) {
   var calendar = document.querySelector('.calendar');
 
   if (calendar) {
-    var buildCalendar = function buildCalendar(month, year) {
+    var buildCalendar = function buildCalendar(month, year, _currentDay) {
       var yearEl = document.querySelector('.year__number .number');
       yearEl.innerText = year;
       var monthActiveEl = document.querySelectorAll('.month__item');
@@ -218,8 +218,21 @@ if (document.querySelector('#map')) {
       }
 
       days.innerHTML = html;
-      document.querySelectorAll('.day__item')[currentDay].classList.add('active');
-      document.querySelectorAll('.day__item')[currentDay].classList.add('dot');
+
+      document.querySelectorAll('.day__item')[_currentDay].classList.add('active');
+
+      document.querySelectorAll('.day__item')[_currentDay].classList.add('dot');
+
+      var dayEls = document.querySelectorAll('.day__item');
+      dayEls.forEach(function (element, index) {
+        element.addEventListener('click', function (e) {
+          dayEls.forEach(function (element) {
+            element.classList.remove('active');
+          });
+          currentDay = index;
+          dayEls[index].classList.add('active');
+        });
+      });
     };
 
     var daysInMonth = function daysInMonth(iMonth, iYear) {
@@ -235,20 +248,20 @@ if (document.querySelector('#map')) {
 
       var _currentYear = today.getFullYear();
 
-      buildCalendar(_currentMonth, _currentYear);
+      buildCalendar(_currentMonth, _currentYear, _currentDay);
     };
 
     var next = function next() {
       currentYear = ++currentYear;
-      buildCalendar(currentMonth, currentYear);
+      buildCalendar(currentMonth, currentYear, currentDay);
     };
 
     var previous = function previous() {
       currentYear = --currentYear;
-      buildCalendar(currentMonth, currentYear);
+      buildCalendar(currentMonth, currentYear, currentDay);
     };
 
-    buildCalendar(currentMonth, currentYear);
+    buildCalendar(currentMonth, currentYear, currentDay);
     var prevEl = document.querySelector('.year__slider .prev');
     var nextEl = document.querySelector('.year__slider .next');
     prevEl.addEventListener('click', function () {
@@ -261,17 +274,7 @@ if (document.querySelector('#map')) {
     monthEls.forEach(function (element, index) {
       element.addEventListener('click', function (e) {
         currentMonth = index;
-        buildCalendar(currentMonth, currentYear);
-      });
-    });
-    var dayEls = document.querySelectorAll('.day__item');
-    dayEls.forEach(function (element, index) {
-      element.addEventListener('click', function (e) {
-        dayEls.forEach(function (element) {
-          element.classList.remove('active');
-        });
-        currentDay = index;
-        dayEls[index].classList.add('active');
+        buildCalendar(currentMonth, currentYear, currentDay);
       });
     });
     var resetEl = document.querySelector('.reset button');
