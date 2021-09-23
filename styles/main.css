@@ -8732,7 +8732,7 @@ body {
   text-align: left;
   color: #020403;
   padding-left: 26px;
-  background: url("/img/sprites/sprite.svg#icon_marker") no-repeat 0 0/18px;
+  background: url("./../img/sprites/sprite.svg#icon_marker") no-repeat 0 0/18px;
   margin-bottom: 12px;
 }
 
@@ -8746,7 +8746,7 @@ body {
   letter-spacing: -0.02em;
   text-align: left;
   color: #020403;
-  background: url("/img/sprites/sprite.svg#icon_phone") no-repeat 0 0/18px;
+  background: url("./../img/sprites/sprite.svg#icon_phone") no-repeat 0 0/18px;
 }
 
 .event-info-detail .divider {
@@ -8930,7 +8930,7 @@ body {
   color: #020403;
   margin-bottom: 17px;
   padding-left: 34px;
-  background: url("/img/sprites/sprite.svg#icon_marker") no-repeat 0;
+  background: url("./../img/sprites/sprite.svg#icon_marker") no-repeat 0;
 }
 
 .event-card .date {
@@ -8947,7 +8947,7 @@ body {
   text-align: left;
   color: #020403;
   padding-left: 34px;
-  background: url("/img/sprites/sprite.svg#icon_calendar") no-repeat 0/20px;
+  background: url("./../img/sprites/sprite.svg#icon_calendar") no-repeat 0/20px;
 }
 
 .event-card .time {
@@ -8958,7 +8958,7 @@ body {
   text-align: left;
   color: #020403;
   padding-left: 34px;
-  background: url("/img/sprites/sprite.svg#icon_cloack") no-repeat 0/20px;
+  background: url("./../img/sprites/sprite.svg#icon_cloack") no-repeat 0/20px;
   margin-right: 64px;
 }
 
@@ -8971,7 +8971,7 @@ body {
   text-align: left;
   color: #020403;
   padding-left: 34px;
-  background: url("/img/sprites/sprite.svg#icon_price") no-repeat 0/20px;
+  background: url("./../img/sprites/sprite.svg#icon_price") no-repeat 0/20px;
 }
 
 .event-card .price span {
@@ -9086,7 +9086,7 @@ body {
   text-align: right;
   color: #020403;
   padding-right: 34px;
-  background: url("/img/sprites/sprite.svg#link__arrow-small") no-repeat 100% 50%/20px;
+  background: url("./../img/sprites/sprite.svg#link__arrow-small") no-repeat 100% 50%/20px;
 }
 
 .page-title {
@@ -9118,7 +9118,7 @@ body {
   letter-spacing: -0.02em;
   color: #020403;
   padding-left: 82px;
-  background: url(/img/sprites/sprite.svg#link_arrow-left) no-repeat;
+  background: url("./../img/sprites/sprite.svg#link_arrow-left") no-repeat;
 }
 
 .page-title .form-control {
@@ -9133,8 +9133,10 @@ body {
   color: #020403;
   appearance: none;
   padding-right: 36px;
-  background: url(/img/sprites/sprite.svg#link_arrow-down) no-repeat 100% 50%/24px;
+  background: url("./../img/sprites/sprite.svg#link_arrow-down") no-repeat 100% 50%/24px;
   cursor: pointer;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .custom-checkbox {
@@ -9396,7 +9398,7 @@ body {
   position: absolute;
   width: 645px;
   height: 645px;
-  background: url("/img/footer__el.png") no-repeat;
+  background: url("./../img/footer__el.png") no-repeat;
   bottom: -110px;
   right: -110px;
   z-index: -1;
@@ -9600,7 +9602,7 @@ body {
   text-align: left;
   color: #020403;
   padding-left: 26px;
-  background: url("/img/sprites/sprite.svg#icon_warning") no-repeat 0 50%/20px;
+  background: url("./../img/sprites/sprite.svg#icon_warning") no-repeat 0 50%/20px;
   line-height: 20px;
 }
 
